@@ -11,7 +11,6 @@ namespace firstcSharp
         }
         static void Start()
         {
-            string userInput;
 
 
             string userChoice = Calculation();
@@ -55,7 +54,7 @@ namespace firstcSharp
             if (answer != "+" && answer != "-" && answer != "*" && answer != "/")
             {
                 Console.WriteLine("Please pick something that is actually an option...");
-                Calculation();
+                return Calculation();
             }
 
             return answer;
@@ -70,7 +69,7 @@ namespace firstcSharp
             if (!int.TryParse(userInput, out value))
             {
                 Console.WriteLine("Please insert a correct number -.-");
-                FirstNum();
+                return FirstNum();
             }
             return value;
         }
@@ -82,7 +81,7 @@ namespace firstcSharp
             if (!int.TryParse(userInput, out value))
             {
                 Console.WriteLine("Please insert a correct number -.-");
-                SecondNum();
+               return SecondNum();
             }
             return value;
         }
