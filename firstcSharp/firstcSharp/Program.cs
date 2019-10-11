@@ -10,7 +10,6 @@ namespace firstcSharp
             string userInput;
 
             Console.WriteLine("What type of calculation do you want to perform? (+, -, *, or /)");
-
             string userChoice = Console.ReadLine();
 
             Console.WriteLine("Enter first number");
@@ -34,10 +33,11 @@ namespace firstcSharp
                     Console.WriteLine($"The answer is {numberOne * numberTwo}");
                     break;
                 case "/":
-                    Console.WriteLine($"The answer is {numberOne / numberTwo}");
+                    double total = numberOne / numberTwo;
+                    Console.WriteLine($"The answer is {total}");
                     break;
                 default:
-                    Console.WriteLine("Hmm you sure you typed everything correctly?");
+                    Console.WriteLine("Please insert the right type");
                     break;
             }
 
